@@ -1,4 +1,4 @@
-# 🛡 Web Application Pentesting Lab Walkthrough
+# 🛡 Unstable TryHackMe Lab Walkthrough
 
 *SQL Injection → Hash Cracking → SSH → Steganography → Flag*
 
@@ -31,6 +31,12 @@ nmap -sV <target_IP>
 ``` bash
 gobuster dir -u http://<target_IP> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 200
 ```
+
+We identified a directory `/info` which exposed `/api/login`.\
+However, it was restricted by HTTP method. After changing the request
+from **GET to POST**,\
+the endpoint required `username` and `password` parameters --- leading
+to payload creation.
 
 ------------------------------------------------------------------------
 
@@ -99,9 +105,9 @@ steghide extract -sf mary_ann.jpeg
 
 # 🌈 Step 8: Final Decode
 
-1.  Arrange extracted text in RAINBOW order\
-2.  Decode using Base62\
-3.  Retrieve final flag
+1.  Arrange extracted text in **RAINBOW order**\
+2.  Decode using **Base62**\
+3.  Retrieve the final flag
 
 ------------------------------------------------------------------------
 
