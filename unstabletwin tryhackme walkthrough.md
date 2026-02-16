@@ -106,7 +106,7 @@ steghide extract -sf mary_ann.jpeg
 # 🌈 Step 8: Final Decode
 
 1.  Arrange extracted text in **RAINBOW order**\
-2.  Decode using **Base62**\
+2.  Decode using **Base62 https://www.dcode.fr/base62-encoding**\ 
 3.  Retrieve the final flag
 
 ------------------------------------------------------------------------
